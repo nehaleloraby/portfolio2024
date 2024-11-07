@@ -17,10 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-background text-foreground`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="light" 
           enableSystem
           disableTransitionOnChange
         >
@@ -30,5 +30,6 @@ export default function RootLayout({
     </html>
   );
 }
+
 
 

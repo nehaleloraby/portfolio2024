@@ -6,16 +6,15 @@ import { TextGenerateEffect } from './ui/TextGenerateEffect';
 
 const Hero = () => {
   return (
-    <div className="pb-20 pt-36">
-      <div>
-        <Spotlight className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen" fill="white" />
-        <Spotlight className="-top-10 -left-full h-[80vh]" fill="purple" />
-        <Spotlight className="-top-28 -left-80 h-[80vh] w-[50vh]" fill="blue" />
+    <div className="pb-20 pt-36 relative">
+      <div className="absolute inset-0 flex justify-center items-center">
+        <Spotlight className="absolute top-1/3 left-1/3 transform -translate-x-full -translate-y-full h-[60vh] w-[60vh] opacity-50" fill="rgba(255, 255, 255, 0.5)" />
+        <Spotlight className="absolute top-1/3 right-1/3 transform translate-x-full -translate-y-full h-[60vh] w-[60vh] opacity-50" fill="rgba(200, 100, 200, 0.4)" />
+        <Spotlight className="absolute bottom-1/4 left-1/2 transform -translate-x-1/2 translate-y-1/2 h-[50vh] w-[50vh] opacity-40" fill="rgba(100, 100, 255, 0.4)" />
       </div>
 
-      <div className="h-screen w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] bg-grid-black/[0.2] relative flex items-center justify-center absolute top-0 left-0">
-        {/* Radial gradient for the container to give a faded look */}
-        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
+      <div className="h-screen w-full dark:bg-lavender bg-pastel-pink relative flex items-center justify-center bg-opacity-25">
+        <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-pastel-pink/[0.1] dark:bg-lavender/[0.07] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
       </div>
 
       <div className="flex justify-center relative my-20 z-10">
@@ -30,7 +29,7 @@ const Hero = () => {
           /> 
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl"> 
-            A Philadephia-based developer focused on creating intuitive, accessible solutions
+            A Philadelphia-based developer focused on creating intuitive, accessible solutions
           </p>
 
           <a href="#about">
@@ -47,4 +46,6 @@ const Hero = () => {
 };
 
 export default Hero;
+
+
 
